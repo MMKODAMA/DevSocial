@@ -53,9 +53,9 @@ function login() {
         return;
 
     } else {
-        let users = JSON.parse(window.localStorage.getItem('Users'));
-        for (let i = 0; i < users.length; i++) {
-            if (users) {
+        if (JSON.parse(window.localStorage.getItem('Users'))) {
+            let users = JSON.parse(window.localStorage.getItem('Users'));
+            for (let i = 0; i < users.length; i++) {
                 if (users[i].email == loginEmail.value && users[i].password == loginPassword.value) {
 
                     let session = {
@@ -75,15 +75,17 @@ function login() {
                     return;
                 }
 
-            } else {
-                let errorMessage = document.getElementById('loginError');
-                errorMessage.style.display = 'block';
-
             }
+        }else{
+            let errorMessage = document.getElementById('loginError');
+                    errorMessage.style.display = 'block';
+                    return;
         }
-    }
 
+    }
 }
+
+
 
 cpw.addEventListener('keyup', (event) => {
 
