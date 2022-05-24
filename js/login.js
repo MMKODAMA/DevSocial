@@ -14,3 +14,7 @@ linklLogin.addEventListener('click',function(){
     formLogin[0].style.display='block';
 
 });
+
+function redirectLogin(){
+    location.href='login.html';
+}

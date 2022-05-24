@@ -4,26 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home|DevSocial</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
 </head>
-<header>
-    <nav id="navbar">
-        <div id="logo"><h1>DevSocial</h1></div>
-        <div id="logout" onclick="logout()">LogOut</div>
-    </nav>
-</header>
-<body>
-    <section id="publish">
-        <textarea name="textfield" id="textfield" cols="30" rows="10" placeholder="  no que você esta pensando?" minlength="1" maxlength="2000"></textarea>
-        <input type="file" id="file" class="file">
-        <button id="postar" type="button" onclick="publicar()">Postar</button>
-        <button id="upload" type="button" onclick="document.getElementById('file').click()">upload</button>
-    </section>
-    <section id="posts">
-        
-    </section>
-    <script src="js/index.js"></script>
-    <script src="js/disconnect.js"></script>
+<body onload="redirectLogin()">
+    <script src="js/login.js"></script>
 </body>
 </html>

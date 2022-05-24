@@ -66,7 +66,7 @@ function login() {
                     localStorage.setItem("Token", true);
                     window.localStorage.setItem('Session', JSON.stringify(session));
 
-                    location.href = 'index.html';
+                    location.href = 'home.html';
                     return;
 
                 } else {
