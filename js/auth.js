@@ -52,7 +52,7 @@ function login() {
 
         return;
 
-    } else {
+    } else { 
         if (JSON.parse(window.localStorage.getItem('Users'))) {
             let users = JSON.parse(window.localStorage.getItem('Users'));
             for (let i = 0; i < users.length; i++) {
