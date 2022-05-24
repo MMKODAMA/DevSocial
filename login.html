@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>DEV SOCIAL</title>
+</head>
+
+<body>
+    <div class="login-page">
+        <div class="form">
+          <h1>DevSocial</h1>
+          <form class="register-form" id="registerForm">
+            <input type="text" placeholder="Nome" id="name" required>
+            <input type="text" placeholder="Telefone" id="phone" required>
+            <input type="text" placeholder="CPF" id="cpf" required>
+            <input type="email" placeholder="Email" id="email" required>
+            <input type="password" placeholder="Senha" id="pw" required>
+            <input type="password" placeholder="Confirmar Senha" id="cpw" required>
+
+            <button type="button" onclick="register()">Cadastrar</button>
+            <p class="message">Já tem uma conta? <a href="#" id="link-to-login">Faça Login</a></p>
+          </form>
+          <form class="login-form" id="login-form">
+              <p id="loginError" style="display: none;">Email ou Senha Incorretos</p>
+            <input type="email" placeholder="Email" id="loginEmail" required>
+            <input type="password" placeholder="Senha" id="loginPassword" required>
+            <button type="button" onclick="login()">login</button>
+            <p class="message">Não tem uma conta? <a href="#" id="link-to-register">Cadastre-se</a></p>
+          </form>
+        </div>
+      </div>
+<script src="js/login.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

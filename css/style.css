@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+body{
+
+    background-image: url('../media/images/system/background2.jpg');
+    font-family: 'Source Code Pro', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+nav{
+    width: 100%;
+    color: white;
+    height: 75px;
+    background-color: rgba(0, 0, 0, 0.527);
+    font-family: 'Source Code Pro', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#logout{
+    float: right;
+    margin: 20px 20px 20px 20px;
+}
+#logo{
+    float: left;
+    margin: 20px 20px 20px 20px;
+}
+#publish{
+    margin: 50px 50px 50px 50px;
+    height:400px;
+    width:85%;
+    padding: 50px;
+
+}
+section div{
+    margin: 50px 50px 50px 50px;
+    padding: 50px;
+    color: white;
+    border: 2px solid white;
+}
+textArea{
+    height: 200px;
+    width: 100%;
+    background-color: rgba(9, 20, 51, 0.74) ;
+    resize:none;
+    margin: 20px 20px 20px 20px;
+    padding: 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    font-size: 20px;
+}
+::placeholder{
+    padding: 20px;
+    color: white;
+    font-size: 15px;
+}
+.file{
+    display: none;
+
+}
+#upload{
+    margin: 20px 20px 20px 20px;
+    padding: 5px;
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: dodgerblue;
+    border: 2px solid white;
+    border-radius:10px;
+
+    font-family: 'Source Code Pro', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#postar{
+    margin: 20px 20px 20px 20px;
+    padding: 5px;
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: dodgerblue;
+    border: 2px solid white;
+    border-radius:10px;
+    float: right;
+
+    font-family: 'Source Code Pro', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.poster{
+    margin: 20px 50px 20px 50px;
+    padding: 0px;
+    background-color: rgba(9, 20, 51) ;
+    height: 200px;
+    border-radius:10px;
+}
+.header{
+    margin: 0px;
+    padding: 5px;
+    border: none;
+}
+.text{
+    margin: 5px;
+    padding: 5px;
+    border: none;
+}
+.content{
+    border: none;
+    margin: 20px;
+    padding: 5px;
+}
