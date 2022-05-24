@@ -53,7 +53,7 @@ function login() {
         return;
 
     } else { 
-        if (JSON.parse(window.localStorage.getItem('Users'))) {
+        if (JSON.parse(window.localStorage.getItem('Users'))!=null) {
             let users = JSON.parse(window.localStorage.getItem('Users'));
             for (let i = 0; i < users.length; i++) {
                 if (users[i].email == loginEmail.value && users[i].password == loginPassword.value) {
