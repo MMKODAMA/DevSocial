@@ -6,14 +6,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
-body{
+body {
 
     background-image: url('../media/images/system/background2.jpg');
     font-family: 'Source Code Pro', monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-nav{
+
+nav {
     width: 100%;
     color: white;
     height: 75px;
@@ -22,34 +23,39 @@ nav{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-#logout{
+
+#logout {
     float: right;
     margin: 20px 20px 20px 20px;
 }
-#logo{
+
+#logo {
     float: left;
     margin: 20px 20px 20px 20px;
 }
-#publish{
+
+#publish {
     margin: 50px 50px 50px 50px;
-    height:400px;
-    width:85%;
+    height: 400px;
+    width: 85%;
     padding: 50px;
 
 }
-section div{
+
+section div {
     margin: 50px 50px 50px 50px;
     padding: 50px;
     color: white;
     border: 2px solid white;
 }
-#divPost textArea{
+
+#divPost textArea {
     margin: 0;
     padding: 0;
     height: 80%;
     width: 100%;
-    background-color: rgba(9, 20, 51, 0) ;
-    resize:none;
+    background-color: rgba(9, 20, 51, 0);
+    resize: none;
     color: white;
     font-size: 20px;
     border-radius: 10px;
@@ -58,49 +64,61 @@ section div{
     overflow: auto;
     outline: none;
 
-    
+
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 10px;
     background-color: transparent;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     background-color: rgb(4, 174, 241);
     border-radius: 5px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background-color: rgb(53, 106, 187);
     width: 9px;
     height: auto;
 }
-::-webkit-scrollbar-corner{
+
+::-webkit-scrollbar-corner {
     background-color: grey;
 }
-::placeholder{
+
+::placeholder {
     padding: 20px;
     color: white;
     font-size: 15px;
 }
-.file{
+
+.file {
     display: none;
 
 }
-#divPost button{
-    margin:5px 5px 5px 5px;
-    padding:0;
+
+#divPost button {
+    margin: 5px 5px 5px 5px;
+    padding: 0;
     width: 100px;
     height: 50px;
     color: white;
     background-color: dodgerblue;
     border: 2px solid white;
-    border-radius:10px;
-
+    border-radius: 10px;
+    transition: 0.2s;
     font-family: 'Source Code Pro', monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-#postar{
+#divPost button:hover {
+    transition: 0.2s;
+    background-color:blue;
+}
+
+#postar {
     margin: 20px 20px 20px 20px;
     padding: 5px;
     width: 100px;
@@ -108,45 +126,79 @@ section div{
     color: white;
     background-color: dodgerblue;
     border: 2px solid white;
-    border-radius:10px;
+    border-radius: 10px;
     float: right;
-
+    transition: 0.2s;
     font-family: 'Source Code Pro', monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.poster{
+
+#postar:hover {
+    transition: 0.2s;
+    background-color: blue;
+}
+
+.poster {
     margin: 20px 50px 20px 50px;
     padding: 0px;
-    background-color: rgba(9, 20, 51) ;
+    background-color: rgba(9, 20, 51);
     height: 200px;
-    border-radius:10px;
+    border-radius: 10px;
 }
-.header{
+
+.header {
     margin: 0px;
     padding: 5px;
     border: none;
 }
-.text{
+
+.text {
     margin: 5px;
     padding: 5px;
     border: none;
 }
-.content{
+
+.content {
     border: none;
     margin: 20px;
     padding: 5px;
+    width: 100%;
+    height: 100%;
 }
-#divPost{
+
+#divPost {
     height: 300px;
     width: 100%;
-    background-color: rgba(9, 20, 51, 0.74) ;
+    background-color: rgba(9, 20, 51, 0.74);
     padding: 0;
     margin: 20px 20px 20px 20px;
     border: 1px solid white;
-    border-radius:10px;
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    -ms-border-radius:10px;
-    -o-border-radius:10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.feedContent {
+    width: 80%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.content2 {
+    border: none;
+    margin: 20px;
+    padding: 5px;
+    width: 100%;
+    height: 100%px;
+}
+
+.poster2 {
+    margin: 20px 50px 20px 50px;
+    padding: 0px;
+    background-color: rgba(9, 20, 51);
+    height: 600px;
+    border-radius: 10px;
 }
