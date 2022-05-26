@@ -14,11 +14,11 @@
         <div class="form">
           <h1>DevSocial</h1>
           <form class="register-form" id="registerForm">
-            <input type="text" placeholder="Nome" id="name" required>
+            <input type="text" placeholder="Nome" id="name" minlength="3" maxlength="50" required>
             <input type="text" placeholder="Telefone" id="phone" required>
             <input type="text" placeholder="CPF" id="cpf" required>
-            <input type="email" placeholder="Email" id="email" required>
-            <input type="password" placeholder="Senha" id="pw" required>
+            <input type="email" placeholder="Email" id="email" maxlength="30" required>
+            <input type="password" placeholder="Senha" id="pw" minlength="6" required>
             <input type="password" placeholder="Confirmar Senha" id="cpw" required>
 
             <button type="button" onclick="register()">Cadastrar</button>
