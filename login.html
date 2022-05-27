@@ -35,5 +35,18 @@
       </div>
 <script src="js/login.js"></script>
 <script src="js/auth.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+<script>
+  var cleave = new Cleave('#cpf', {
+    delimiters: ['.', '.', '-'],
+    blocks: [3, 3, 3, 2],
+    numericOnly: true	
+});
+var cleave = new Cleave('#phone', {
+    delimiters: ['(',')','-', '-'],
+    blocks: [ 0, 3, 4, 5],
+    numericOnly: true	
+});
+</script>
 </body>
 </html>
