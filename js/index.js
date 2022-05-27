@@ -92,7 +92,7 @@ function carregarPosts() {
       </div>`;
     } else if (poster.mediaType == 'video') {
       timeLine.innerHTML += `  
-      <div class="poster"> 
+      <div class="poster2"> 
       <div class="header"> 
         <div class="text"> 
           <p>${poster.user} </p> 
@@ -106,7 +106,7 @@ function carregarPosts() {
   </div>`;
     } else if (poster.mediaType == 'audio') {
       timeLine.innerHTML += `  
-      <div class="poster"> 
+      <div class="poster2"> 
       <div class="header"> 
         <div class="text"> 
           <p>${poster.user} </p> 

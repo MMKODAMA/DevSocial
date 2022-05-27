@@ -22,10 +22,14 @@ function register() {
             phone.style.backgroundColor = 'rgba(255, 3, 46, 0.7)';
             phone.style.color = 'white';
             phone.setCustomValidity('Este Campo é Obrigatorio');
+        }if(!cpf.checkValidity()){
+            cpf.setCustomValidity('Este Campo é Obrigatorio');
+        }if(!email.checkValidity()){
+            email.setCustomValidity('Este Campo é Obrigatorio');
+        }if(!pw.checkValidity()){
+
+            pw.setCustomValidity('Este Campo é Obrigatorio');
         }
-        cpf.setCustomValidity('Este Campo é Obrigatorio');
-        email.setCustomValidity('Este Campo é Obrigatorio');
-        pw.setCustomValidity('Este Campo é Obrigatorio');
         return;
     }
 
