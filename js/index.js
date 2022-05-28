@@ -62,46 +62,47 @@ function carregarPosts() {
   let feed = '';
   timeLine.innerHTML = '';
 
-  posts.map((poster) => {
-    if (poster.mediaType == 'text') {
+  
+  for(let i = posts.length-1; i >=0; i--){
+    if (posts[i].mediaType == 'text') {
       timeLine.innerHTML += `  
       <div class="poster"> 
       <div class="header"> 
         <div class="text"> 
-          <p>${poster.user} </p> 
+          <p>${posts[i].user} </p> 
           <p>São Paulo - SP</p>
         </div> 
       </div> 
       <div class="content"> 
-        <p>${poster.textContent}</p> 
+        <p>${posts[i].textContent}</p> 
       </div> 
   </div>`;
-    } else if (poster.mediaType == 'img') {
+    } else if (posts[i].mediaType == 'img') {
       timeLine.innerHTML += `  
       <div class="poster2"> 
         <div class="header"> 
           <div class="text"> 
-            <p>${poster.user} </p> 
+            <p>${posts[i].user} </p> 
             <p>São Paulo - SP</p>
           </div> 
         </div> 
       <div class="content2"> 
-        <p>${poster.textContent}</p> 
-        <img src="${poster.mediaContent}" class="feedContent">
+        <p>${posts[i].textContent}</p> 
+        <img src="${posts[i].mediaContent}" class="feedContent">
       </div> 
       </div>`;
-    } else if (poster.mediaType == 'video') {
+    } else if (posts[i].mediaType == 'video') {
       timeLine.innerHTML += `  
       <div class="poster2"> 
       <div class="header"> 
         <div class="text"> 
-          <p>${poster.user} </p> 
+          <p>${posts[i].user} </p> 
           <p>São Paulo - SP</p>
         </div> 
       </div> 
       <div class="content2"> 
-        <p>${poster.textContent}</p> 
-        <video src="${poster.mediaContent}" class="feedContent" controls></video>
+        <p>${posts[i].textContent}</p> 
+        <video src="${posts[i].mediaContent}" class="feedContent" controls></video>
       </div> 
   </div>`;
     } else if (poster.mediaType == 'audio') {
@@ -109,18 +110,17 @@ function carregarPosts() {
       <div class="poster2"> 
       <div class="header"> 
         <div class="text"> 
-          <p>${poster.user} </p> 
+          <p>${posts[i].user} </p> 
           <p>São Paulo - SP</p>
         </div> 
       </div> 
       <div class="content2"> 
-        <p>${poster.textContent}</p> 
-        <audio src="${poster.mediaContent}" class="feedContent"controls></audio>
+        <p>${posts[i].textContent}</p> 
+        <audio src="${posts[i].mediaContent}" class="feedContent"controls></audio>
       </div> 
   </div>`;
     }
-
-  });
+  }
 
 }
 
