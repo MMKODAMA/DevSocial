@@ -1,0 +1,21 @@
+*{
+    padding:0;
+    margin:0;
+    border:0;
+}
+
+canvas{
+    border: 1px solid red;
+}
+#controles{
+    width:500px;
+    height:100px;
+    background-color:red;
+}
+.cores{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    background-color:white;
+    border: 1px solid blue;
+}

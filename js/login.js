@@ -18,9 +18,3 @@ linklLogin.addEventListener('click',function(){
 function redirectLogin(){
     location.href='login.html';
 }
-
-var cleave = new Cleave('#cpf', {
-    delimiters: ['.', '.', '-'],
-    blocks: [3, 3, 3, 2],
-    numericOnly: true	
-});
