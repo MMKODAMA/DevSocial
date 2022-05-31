@@ -5,6 +5,13 @@ if (localStorage.getItem("Token") == null) {
 
 }
 
+function openCanvas(){
+  let canvasSection = document.getElementById('canvasSection');
+  let canvasBG = document.getElementById('canvasBG');
+  canvasBG.style.display="block";
+  canvasSection.style.display='block';
+}
+
 let caixaDeTexto = document.getElementById('textfield');
 let timeLine = document.getElementById('posts');
 
@@ -36,13 +43,15 @@ function publicar() {
     file = audio.src;
     type = 'audio';
   }
+  let geo;
   let session = JSON.parse(localStorage.getItem('Session'));
   let posts = JSON.parse(localStorage.getItem('Posts')) || [];
   posts.push({
     user: session.nome,
     textContent: caixaDeTexto.value.trim(),
     mediaContent: file,
-    mediaType: type
+    mediaType: type,
+    local: session.local
   });
   localStorage.setItem('Posts', JSON.stringify(posts));
   caixaDeTexto.value = '';
@@ -54,7 +63,6 @@ function publicar() {
   img.src = "";
   inputFile.src='';
   window.location.reload();
-  //carregarPosts();
 
 }
 function carregarPosts() {
@@ -70,7 +78,7 @@ function carregarPosts() {
       <div class="header"> 
         <div class="text"> 
           <p>${posts[i].user} </p> 
-          <p>São Paulo - SP</p>
+          <p>${posts[i].local}</p>
         </div> 
       </div> 
       <div class="content"> 
@@ -83,7 +91,7 @@ function carregarPosts() {
         <div class="header"> 
           <div class="text"> 
             <p>${posts[i].user} </p> 
-            <p>São Paulo - SP</p>
+            <p>${posts[i].local}</p>
           </div> 
         </div> 
       <div class="content2"> 
@@ -97,7 +105,7 @@ function carregarPosts() {
       <div class="header"> 
         <div class="text"> 
           <p>${posts[i].user} </p> 
-          <p>São Paulo - SP</p>
+          <p>${posts[i].local}</p>
         </div> 
       </div> 
       <div class="content2"> 
@@ -111,7 +119,7 @@ function carregarPosts() {
       <div class="header"> 
         <div class="text"> 
           <p>${posts[i].user} </p> 
-          <p>São Paulo - SP</p>
+          <p>${posts[i].local}</p>
         </div> 
       </div> 
       <div class="content2"> 

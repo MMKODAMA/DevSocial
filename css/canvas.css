@@ -6,16 +6,41 @@
 
 canvas{
     border: 1px solid red;
+    background-color: white;
+
 }
 #controles{
     width:500px;
-    height:100px;
-    background-color:red;
+    height: 50px;;
+    background-color:grey;
 }
 .cores{
     display: inline-block;
     width:20px;
     height:20px;
-    background-color:white;
-    border: 1px solid blue;
+    border: 2px solid white;
+    margin: 5px;
+}
+.cores:hover{
+    cursor: pointer;
+}
+#canvasSection{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+#canvasBG{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.747);
+    /*text-align: center;*/
+}
+.canvasBG > div{
+    /*margin: auto;*/
 }

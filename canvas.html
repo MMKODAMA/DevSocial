@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,21 @@
     <title>DevSocial</title>
     <link rel="stylesheet" href="css/canvas.css">
 </head>
+
 <body>
-    <canvas id="canvas" width="500" height="500" ></canvas>
+    <canvas id="canvas" width="500" height="500"></canvas>
     <button id="download">Download</button>
     <div id="controles">
-        <div class="cores"></div>
-        <div class="cores"></div>
-        <div class="cores"></div>
-        <div class="cores"></div>
-        <colgroup style="width:50px; height:50px"></colgroup>
+        <div id="azul" class="cores" style="background-color: blue;"></div>
+        <div id="vermelho" class="cores" style="background-color: red;"></div>
+        <div id="verde" class="cores" style="background-color: green;"></div>
+        <div id="amarelo" class="cores" style="background-color: yellow;"></div>
+        <div id="preto" class="cores" style="background-color: black;"></div>
+        <div id="rosa" class="cores" style="background-color: pink;"></div>
+        <input type="color" id="colorSelector">
     </div>
 
     <script src="js/canvas.js"></script>
 </body>
+
 </html>

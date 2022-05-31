@@ -1,37 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home|DevSocial</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/canvas.css">
 </head>
 <header>
     <nav id="navbar">
-        <div id="logo"><h1>DevSocial</h1></div>
+        <div id="logo">
+            <h1>DevSocial</h1>
+        </div>
         <div id="logout" onclick="logout()">LogOut</div>
     </nav>
 </header>
+
 <body>
     <section id="publish">
         <div id="divPost">
-            <textarea name="textfield" id="textfield" cols="30" rows="10" placeholder="  no que você esta pensando?" minlength="1" maxlength="2000"></textarea>
-            <input type="file" id="file" class="file" accept="image/jpg,image/png,image/jpeg,video/mp4,audio/mp3"> 
+            <textarea name="textfield" id="textfield" cols="30" rows="10" placeholder="  no que você esta pensando?"
+                minlength="1" maxlength="2000"></textarea>
+            <input type="file" id="file" class="file" accept="image/jpg,image/png,image/jpeg,video/mp4,audio/mp3">
             <img src="" id="imagem" width="100px" height="100px" style="display: none;">
             <video src="" id="video" style="display: none;overflow: hidden;"></video>
             <audio src="" id="audio" style="display: none; overflow: hidden;"></audio>
-            <button id="upload" type="button" onclick="upload()">upload</button>
+            <button id="upload" type="button" onclick="upload()">Upload</button>
+            <button id="canvasButton" type="button" onclick="openCanvas()">Canvas</button>
         </div>
-        
+
         <button id="postar" type="button" onclick="publicar()">Postar</button>
-        
-        
+
+
     </section>
     <section id="posts">
-        
+
     </section>
+    <div id="canvasSection" style="display: none;">
+        <div id="canvasBG">
+            <div>
+
+                <canvas id="canvas" width="500" height="500"></canvas>
+                <button id="save">Salvar</button>
+                <div id="controles">
+                    <div id="azul" class="cores" style="background-color: blue;"></div>
+                    <div id="vermelho" class="cores" style="background-color: red;"></div>
+                    <div id="verde" class="cores" style="background-color: green;"></div>
+                    <div id="amarelo" class="cores" style="background-color: yellow;"></div>
+                    <div id="preto" class="cores" style="background-color: black;"></div>
+                    <div id="rosa" class="cores" style="background-color: pink;"></div>
+                    <div id="roxo" class="cores" style="background-color: purple;"></div>
+                    <input type="color" id="colorSelector" style="cursor: pointer;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/canvas.js"></script>
     <script src="js/index.js"></script>
     <script src="js/disconnect.js"></script>
 </body>
+
 </html>

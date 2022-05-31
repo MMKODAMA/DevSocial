@@ -8,6 +8,15 @@ let registerForm = document.getElementById('registerForm');
 let loginForm = document.getElementById('login-form');
 
 
+let geo ="";
+    const successCallBack = (position)=>{
+        geo = position.coords.latitude+','+position.coords.longitude;
+    }
+    const errorCallBack = (position)=>{
+        geo ='';
+    }
+    navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack); 
+
 
 
 
@@ -50,24 +59,24 @@ function register() {
 }
 
 function login() {
+    
     let loginEmail = document.getElementById('loginEmail');
     let loginPassword = document.getElementById('loginPassword');
     if (!loginForm.reportValidity()) {
-
         return;
-
     } else { 
         if (JSON.parse(window.localStorage.getItem('Users'))!=null) {
             let users = JSON.parse(window.localStorage.getItem('Users'));
-            console.log(users);
             for (let i = 0; i < users.length; i++) {
                 if (users[i].email == loginEmail.value && users[i].password == loginPassword.value) {
-
+                    console.log(location);
                     let session = {
                         id: i,
                         nome: users[i].name,
-                        email: users[i].email
+                        email: users[i].email,
+                        local: geo
                     }
+                    console.log('OK');
                     localStorage.setItem("Token", true);
                     window.localStorage.setItem('Session', JSON.stringify(session));
 
