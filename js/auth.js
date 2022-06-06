@@ -26,19 +26,25 @@ function register() {
         if (!nome.checkValidity()) {
             nome.style.backgroundColor = 'rgba(255, 3, 46, 0.7)';
             nome.style.color = 'white';
+            alert('Digite seu nome');
             nome.setCustomValidity('Este Campo é Obrigatorio');
         } if (!phone.checkValidity()) {
             phone.style.backgroundColor = 'rgba(255, 3, 46, 0.7)';
             phone.style.color = 'white';
             phone.setCustomValidity('Este Campo é Obrigatorio');
+            alert('Insira seu telefone no seguinte formato:\n(DDD)XXXX-XXXXX');
         }if(!cpf.checkValidity()){
-            cpf.setCustomValidity('Este Campo é Obrigatorio');
+            cpf.setCustomValidity('Digite um CPF valido');
+            alert('Digite um CPF valido');
         }if(!email.checkValidity()){
-            email.setCustomValidity('Este Campo é Obrigatorio');
+            email.setCustomValidity('Digite um email valido');
+            alert('Digite um email valido');
         }if(!pw.checkValidity()){
 
             pw.setCustomValidity('Este Campo é Obrigatorio');
+            alert('Sua senha é obrigatoria e deve ter no minimo 6 digitos contedo ao menos letra maiuscula , um numero e uma letra minuscula');
         }
+        window.location.reload();
         return;
     }
 
@@ -50,7 +56,7 @@ function register() {
         email: email.value,
         password: pw.value
     });
-
+    alert("Cadastro realizado com sucesso");
     localStorage.setItem('Users', JSON.stringify(users));
     let formLogin = document.getElementsByClassName('login-form');
     let formRegister = document.getElementsByClassName('register-form');
@@ -117,4 +123,3 @@ nome.addEventListener('keyup', (event) => {
         nome.style.color = 'white'
     }
 });
-
