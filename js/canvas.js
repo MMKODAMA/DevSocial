@@ -19,7 +19,7 @@ window.addEventListener("load",()=>{
     const canvas = document.getElementById('canvas');
     const context = canvas.getContext('2d');
     //variables
-    context.strokeStyle='rgb(255,0,0)';
+    context.strokeStyle='black';
     let desenhando = false;
     function startPosition(e){
         desenhando = true;

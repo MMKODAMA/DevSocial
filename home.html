@@ -27,9 +27,9 @@
             <img src="" id="imagem" width="100px" height="100px" style="display: none;">
             <video src="" id="video" style="display: none;overflow: hidden;"></video>
             <audio src="" id="audio" style="display: none; overflow: hidden;"></audio>
-            <button id="upload" type="button" onclick="upload()">Upload</button>
-            <button id="canvasButton" type="button" onclick="openCanvas()">Canvas</button>
         </div>
+        <button id="upload" type="button" onclick="upload()">Upload</button>
+        <button id="canvasButton" type="button" onclick="openCanvas()">Canvas</button>
 
         <button id="postar" type="button" onclick="publicar()">Postar</button>
 
@@ -52,18 +52,11 @@
                     <div id="preto" class="cores" style="background-color: black;"></div>
                     <div id="rosa" class="cores" style="background-color: pink;"></div>
                     <div id="roxo" class="cores" style="background-color: purple;"></div>
-                    <input type="color" id="colorSelector" style="cursor: pointer;">
+                    <input type="color" id="colorSelector" style="cursor: pointer; float: right;"></input>
                 </div>
             </div>
         </div>
     </div>
-    <footer class="footer">
-
-        <div style="background-color: black;">
-            DevSocial 
-        </div>
-
-    </footer>
 
     <script src="js/canvas.js"></script>
     <script src="js/index.js"></script>

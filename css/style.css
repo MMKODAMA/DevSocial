@@ -52,7 +52,7 @@ section div {
 #divPost textArea {
     margin: 0;
     padding: 0;
-    height: 80%;
+    height: 50%;
     width: 100%;
     background-color: rgba(9, 20, 51, 0);
     resize: none;
@@ -99,7 +99,7 @@ section div {
 
 }
 
-#divPost button {
+button {
     margin: 5px 5px 5px 5px;
     padding: 0;
     width: 100px;
@@ -113,7 +113,7 @@ section div {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-#divPost button:hover {
+button:hover {
     transition: 0.2s;
     background-color:blue;
 }

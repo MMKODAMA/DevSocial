@@ -1,4 +1,4 @@
-if (localStorage.getItem("Token") == null) {
+if (sessionStorage.getItem("Token") == null) {
 
   alert('Voce precisa estar logado');
   location.href = "login.html";
@@ -27,11 +27,13 @@ function upload() {
 }
 
 function publicar() {
+  
   let inputFile = document.getElementById('file');
   let img = document.getElementById('imagem');
   let video = document.getElementById('video');
   let audio = document.getElementById('audio');
-  let file = '';
+  if(caixaDeTexto.value.trim().length > 0 || audio.style.display != 'none' || video.style.display != 'none'|| img.style.display != 'none'){
+    let file = '';
   let type = 'text';
   if (img.style.display == 'block') {
     file = img.src;
@@ -44,7 +46,7 @@ function publicar() {
     type = 'audio';
   }
   let geo;
-  let session = JSON.parse(localStorage.getItem('Session'));
+  let session = JSON.parse(sessionStorage.getItem('Session'));
   let posts = JSON.parse(localStorage.getItem('Posts')) || [];
   posts.push({
     user: session.nome,
@@ -63,6 +65,12 @@ function publicar() {
   img.src = "";
   inputFile.src='';
   window.location.reload();
+  }else{
+    alert("Seu post esta vazio");
+    caixaDeTexto.value='';
+
+  }
+  
 
 }
 function carregarPosts() {
@@ -113,18 +121,18 @@ function carregarPosts() {
         <video src="${posts[i].mediaContent}" class="feedContent" controls></video>
       </div> 
   </div>`;
-    } else if (poster.mediaType == 'audio') {
+    } else if (posts[i].mediaType == 'audio') {
       timeLine.innerHTML += `  
-      <div class="poster2"> 
+      <div class="poster"> 
       <div class="header"> 
         <div class="text"> 
           <p>${posts[i].user} </p> 
           <p>${posts[i].local}</p>
         </div> 
       </div> 
-      <div class="content2"> 
+      <div class="content"> 
         <p>${posts[i].textContent}</p> 
-        <audio src="${posts[i].mediaContent}" class="feedContent"controls></audio>
+        <audio src="${posts[i].mediaContent}" class="feedContent"controls style="height:50px"></audio>
       </div> 
   </div>`;
     }
@@ -144,6 +152,8 @@ function base64(file, type) {
     if (type == 'mp4') {
       document.getElementById('video').src = reader.result;
       document.getElementById('video').style.display = 'block';
+      document.getElementById('video').style.height = '100px';
+      document.getElementById('video').style.width = '100px';
     }
     if (type == 'mp3') {
       document.getElementById('audio').src = reader.result;

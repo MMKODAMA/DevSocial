@@ -22,29 +22,18 @@ let geo ="";
 
 function register() {
     if (!registerForm.reportValidity()) {
-        console.log(registerForm.checkValidity());
-        if (!nome.checkValidity()) {
-            nome.style.backgroundColor = 'rgba(255, 3, 46, 0.7)';
-            nome.style.color = 'white';
+        if (!nome.reportValidity()) {
             alert('Digite seu nome');
-            nome.setCustomValidity('Este Campo é Obrigatorio');
-        } if (!phone.checkValidity()) {
-            phone.style.backgroundColor = 'rgba(255, 3, 46, 0.7)';
-            phone.style.color = 'white';
-            phone.setCustomValidity('Este Campo é Obrigatorio');
+        } if (!phone.reportValidity()) {
             alert('Insira seu telefone no seguinte formato:\n(DDD)XXXX-XXXXX');
-        }if(!cpf.checkValidity()){
-            cpf.setCustomValidity('Digite um CPF valido');
+        }if(!cpf.reportValidity()){
             alert('Digite um CPF valido');
-        }if(!email.checkValidity()){
-            email.setCustomValidity('Digite um email valido');
+        }if(!email.reportValidity()){
             alert('Digite um email valido');
-        }if(!pw.checkValidity()){
-
-            pw.setCustomValidity('Este Campo é Obrigatorio');
+        }if(!pw.reportValidity()){
             alert('Sua senha é obrigatoria e deve ter no minimo 6 digitos contedo ao menos letra maiuscula , um numero e uma letra minuscula');
         }
-        window.location.reload();
+        //window.location.reload();
         return;
     }
 
@@ -83,8 +72,8 @@ function login() {
                         local: geo
                     }
                     console.log('OK');
-                    localStorage.setItem("Token", true);
-                    window.localStorage.setItem('Session', JSON.stringify(session));
+                    sessionStorage.setItem("Token", true);
+                    sessionStorage.setItem('Session', JSON.stringify(session));
 
                     location.href = 'home.html';
                     return;
