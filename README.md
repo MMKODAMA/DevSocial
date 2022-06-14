@@ -1,4 +1,3 @@
-# DevSocial
 <h1 align="center">DevSocial</h1>
 
 ## :bookmark: Sobre
